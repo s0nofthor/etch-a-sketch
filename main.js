@@ -1,5 +1,10 @@
+//Make Tron's home
 for (i=0; i<256; i++) {
-    const point = document.createElement('div');
-    point.className = "points";
-    document.getElementById('container').appendChild(point);
+    const tile = document.createElement('div');
+    tile.className = "tiles";
+    document.getElementById('container').appendChild(tile);
+    
+    tile.addEventListener('mouseenter', function() {
+        this.style.backgroundColor = 'green';
+    })
 }
