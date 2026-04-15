@@ -3,31 +3,43 @@ body {
     height: 100vh;
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+#banner {
+    display: flex;
+    width: 100vw;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+}
 #container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
+.rows {
+    display: flex;
+    flex-grow: 1;
+}
 .fat {
-    width: 100vh;
-    height: 100vh;
-    .tiles {
-    width: 6.25vh;
-    height: 6.25vh;
-    }
+    width: 90vh;
+    height: 90vh;
 }
 .skinny {
-    width: 100vw;
-    height: 100vw;
-    .tiles {
-    width: 6.25vw;
-    height: 6.25vw;
-    }
+    width: 90vw;
+    height: 90vw;
 }
 .tiles {
     text-align: center;
     box-sizing: border-box;
     border: solid;
+    border-width: .01em;
+    flex-grow: 1;
+}
+#newGrid {
+    font-size: 4vh;
+    width: fit-content;
+    height: fit-content;
 }
