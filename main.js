@@ -27,6 +27,15 @@
     })
 //
 
+//Colorizer
+    function getRandomColor() {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+    }
+//
+
 //Make Tron's home
     for (i=0; i<16; i++) {
         const rows = cont.appendChild(document.createElement('div'));
@@ -38,8 +47,8 @@
             rows.appendChild(tile);
 
             tile.addEventListener('mouseenter', function() {
-                this.style.backgroundColor = 'green';
-            })
+                this.style.backgroundColor = getRandomColor();
+            }, {once: true})
         }
     }
 //
@@ -60,10 +69,9 @@
                     rows.appendChild(tile);
 
                     tile.addEventListener('mouseenter', function() {
-                        this.style.backgroundColor = 'green';
-                    })
+                        this.style.backgroundColor = getRandomColor();
+                    }, {once: true})
                 }
-        
             }
         } else if (factor > 100) {
             alert("Please don't crash the browser");
