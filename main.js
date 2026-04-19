@@ -60,7 +60,7 @@
 
 //Renovate Tron's home
     newGrid.addEventListener('click', function() {
-        let factor = prompt("How many rows of tiles should there be?", "");
+        let factor = prompt("How many rows of tiles should there be? Please make it less than 100", "");
             
         if (factor <= 100) {
             cont.innerHTML = "";
