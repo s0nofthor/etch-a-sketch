@@ -14,10 +14,16 @@ body {
     align-items: center;
     justify-content: center;
 }
+#newGrid {
+    font-size: 4vh;
+    width: fit-content;
+    height: fit-content;
+}
 #container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    background-color: black;
 }
 .rows {
     display: flex;
@@ -32,14 +38,15 @@ body {
     height: 90vw;
 }
 .tiles {
+    display: flex;
     text-align: center;
     box-sizing: border-box;
     border: solid;
     border-width: .01em;
     flex-grow: 1;
+    background-color: white;
 }
-#newGrid {
-    font-size: 4vh;
-    width: fit-content;
-    height: fit-content;
+.diffuser {
+    flex-grow: 1;
+    background-color: black;
 }

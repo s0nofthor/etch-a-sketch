@@ -1,10 +1,9 @@
 //Set up playspace
     const banner = document.getElementById('banner');
+    const newGrid = banner.appendChild(document.createElement('button'));
+        newGrid.id = 'newGrid';
+        newGrid.textContent = 'Custom Grid';
     const cont = document.getElementById('container');
-    const newGrid = document.createElement('button');
-    newGrid.id = 'newGrid';
-    newGrid.textContent = 'Custom Grid';
-    banner.appendChild(newGrid);
 //
 
 //Color within the lines
@@ -41,13 +40,19 @@
         const rows = cont.appendChild(document.createElement('div'));
         rows.className = 'rows';
         for (j=0; j<16; j++) {
-            const tile = document.createElement('div');
+            const tile = rows.appendChild(document.createElement('div'));
             tile.className = 'tiles';
-            tile.id = 'custom';
-            rows.appendChild(tile);
-
+//
+//Change the vibe
             tile.addEventListener('mouseenter', function() {
                 this.style.backgroundColor = getRandomColor();
+                this.style.opacity = '1';
+                this.id = 'on';
+                this.addEventListener('mouseleave', function() {
+                    this.addEventListener('mouseenter', function(){
+                        this.style.opacity -= '0.1';
+                    }, {once: true})
+                })
             }, {once: true})
         }
     }
@@ -63,16 +68,25 @@
                 const rows = cont.appendChild(document.createElement('div'));
                 rows.className = 'rows';
                 for (j=0; j<factor; j++) {
-                    const tile = document.createElement('div');
+                    const tile = rows.appendChild(document.createElement('div'));
                     tile.className = 'tiles';
                     tile.id = 'custom';
-                    rows.appendChild(tile);
-
+//
+//Change the changed vibe
                     tile.addEventListener('mouseenter', function() {
                         this.style.backgroundColor = getRandomColor();
+                        this.style.opacity = '1';
+                        this.id = 'on';
+                        this.addEventListener('mouseleave', function() {
+                            this.addEventListener('mouseenter', function(){
+                                this.style.opacity -= '0.1';
+                            }, {once: true})
+                        })
                     }, {once: true})
                 }
             }
+//
+//Deal with the cheeky lads n lasses
         } else if (factor > 100) {
             alert("Please don't crash the browser");
             let factor = prompt("How many rows of tiles should there be?", "");

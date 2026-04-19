@@ -14,3 +14,11 @@ Thankfully, the problems that seem to take up most of my time seem to have the s
 Project instructions provided by https://www.theodinproject.com/lessons/foundations-etch-a-sketch
 
 PS: I will be completing the "extra credit" quite soon
+
+Update, April 19th, 2026:
+
+It turns out "quite soon" is now.
+
+I've finally wrapped up adding the functionality of letting each cell be its own randomly assigned color and dimming each tile the more it's drawn over. This proved the rule yet again of the solution being simpler than I had belived it could be, another relief. I was really puzzling over how to get a "filter" element to increase in opacity with each event activation while juggling a few different limits to its functionality like making sure it doesn't start immediately and how to append it to the tile element from the intial activation while still being able to be referred to while outside of the scope (I thought figuring out how to refer to the newly created element through the html instead of the js file might do it). I abandoned this when it hit me that I could just decrease the opacity of the tile itself and just make the background of the container black. This got around the scope issue immediately and resulted in much simpler code, which excites me quite a bit. I'm also quite pleased with how little time it took me to get through this project, seeing as how I've quite evidently struggled with being daunted by projects and the fact that I don't seem to be moving forward terribly quickly session to session when I get stuck on parts of it. Before, I would have a panic response of procrastinating and prioritizing other things in my life, but this time I made sure I was chipping away at it each day and constantly trying new things and thinking the problems over in my spare time. I feel this will propel me to keep this momentum up and really start to use my skills with more and more ease.
+
+Expect some stlyistic additions in the future.
